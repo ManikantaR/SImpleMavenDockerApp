@@ -12,8 +12,8 @@ FROM openjdk:8u171-jre-alpine
 
 WORKDIR /mysampleapp
 
-COPY --from=maven target/myapp-0.0.1-SNAPSHOT.jar ./SimpleJavaProject.jar
+COPY --from=maven target/myapp-0.0.1-SNAPSHOT.jar ./SimpleJavaAppOnDocker.jar
 
-ENTRYPOINT ["java", "-jar", "./SimpleJavaProject.jar"]
+ENTRYPOINT ["java", "-jar", "./SimpleJavaAppOnDocker.jar"]
 
 CMD ["mani"]
